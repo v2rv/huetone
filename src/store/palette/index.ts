@@ -5,6 +5,7 @@ export { exportToTokens } from './converters'
 export { parseOldLchPalette } from './converters'
 export { jsonToHexPalette } from './converters'
 export { getPaletteLink } from './converters'
+export { exportToOklchPalette } from './converters'
 
 export { addHue } from './paletteReducers'
 export { addTone } from './paletteReducers'

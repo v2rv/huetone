@@ -77,6 +77,9 @@ const Hotkeys = () => {
           format and paste it here.
         </li>
         <li>
+          <Key>O</Key> — toggle between Hex and OKLCH format in palette export.
+        </li>
+        <li>
           Hold <Key>B</Key> — preview palette in greys.
         </li>
       </List>
@@ -108,7 +111,7 @@ const Credits = () => (
     </p>
     <p>
       Accessible Perceptual Contrast Algorithm (APCA) by Andrew Somers is a
-      WCAG 3 working draft and may change later. To learn more visit{' '}
+      WCAG 3 working draft and may change later. To learn more visit{' '}
       <Link href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Visual_Contrast_of_Text_Subgroup">
         this page
       </Link>{' '}

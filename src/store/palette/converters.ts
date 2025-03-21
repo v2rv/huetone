@@ -1,5 +1,6 @@
 import LZString from 'lz-string'
 import { colorSpaces } from 'shared/colorFuncs'
+import { colorToLchString } from 'shared/color'
 import {
   HexPalette,
   OldLchPalette,
@@ -132,6 +133,20 @@ export function exportToCSS(palette: Palette): string {
     })
   })
   return strings.join('\n')
+}
+
+/** Convert local palette to OKLCH format
+ *  @param palette
+ */
+export function exportToOklchPalette(palette: Palette): HexPalette {
+  return {
+    name: palette.name,
+    hues: palette.hues.map((hue, i) => ({
+      name: hue,
+      colors: palette.colors[i].map(color => colorToLchString(color)),
+    })),
+    tones: [...palette.tones],
+  }
 }
 
 /** Get palette permalink
